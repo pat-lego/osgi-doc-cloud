@@ -4,7 +4,7 @@ on:
     branches:
       - master
       - feature/*
-  jobs:
+jobs:
   build_and_test:
     name: Java Build and Test
     runs-on: ubuntu-latest
