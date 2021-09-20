@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>karaf-module</artifactId>
+    <groupId>io.github.patlego.dc</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+
+  <groupId>io.github.patlego.dc</groupId>
+  <artifactId>karaf-doc-cloud</artifactId>
+
+  <packaging>bundle</packaging>
+
+  <name>Karaf Doc Cloud Wrapper</name>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <extensions>true</extensions>
+        <executions>
+          <execution>
+            <id>scr-metadata</id>
+            <goals>
+              <goal>manifest</goal>
+            </goals>
+            <configuration>
+              <supportIncrementalBuild>true</supportIncrementalBuild>
+            </configuration>
+          </execution>
+        </executions>
+        <configuration>
+          <exportScr>true</exportScr>
+          <instructions>
+            <Embed-Dependency>core</Embed-Dependency>
+            <Embed-Transitive>true</Embed-Transitive>
+            <Private-Package>io.github.patlego.dc.core.*</Private-Package>
+            <Export-Package>io.github.patlego.dc.karaf.*</Export-Package>
+            <Import-Package>org.xml.sax.*, 
+                            javax.xml.transform.*, 
+                            javax.xml.stream.*,
+                            javax.net.ssl.*,
+                            javax.naming.*,
+                            javax.net.*
+            </Import-Package>
+          </instructions>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>osgi.core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>osgi.cmpn</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>osgi.annotation</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.github.patlego.dc</groupId>
+      <artifactId>core</artifactId>
+      <version>${project.version}</version>
+      <type>jar</type>
+      <classifier>jar-with-dependencies</classifier>
+    </dependency>
+  </dependencies>
+</project>

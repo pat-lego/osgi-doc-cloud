@@ -1,0 +1,7 @@
+.project
+.classpath
+target/
+*.prefs
+core/src/main/resources/pdfservices-api-credentials.json
+.DS_Store
+core/src/main/resources/private.key
