@@ -21,20 +21,8 @@ import io.github.patlego.dc.karaf.DocCloudServices;
 @Component(service = DocCloudServices.class,immediate = true)
 public class SimpleDocCloudServices implements DocCloudServices {
 
-    // TODO set this
-    private String path;
-
     @Override
     public OutputStream mergeDocument() throws DocCloudException {
         return new MergeDocumentToPDF().invoke();
     }
-
-    @Activate
-    public void activate() throws Exception {
-        ByteArrayOutputStream out = (ByteArrayOutputStream) mergeDocument();
-        byte[] result = out.toByteArray();
-
-        Files.write(Paths.get(String.format("%s/result.pdf", path)), result);
-    }
-    
 }
