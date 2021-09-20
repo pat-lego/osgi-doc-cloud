@@ -35,7 +35,6 @@
           <exportScr>true</exportScr>
           <instructions>
             <Embed-Dependency>core</Embed-Dependency>
-            <Embed-Transitive>true</Embed-Transitive>
             <Private-Package>io.github.patlego.dc.core.*</Private-Package>
             <Export-Package>io.github.patlego.dc.karaf.*</Export-Package>
             <Import-Package>org.xml.sax.*, 
