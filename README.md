@@ -12,7 +12,7 @@ This project wraps the SDK in a lightweight OSGi bundle allowing developers to e
 
 The Karaf Module is built to be deployed in Apache Karaf allowing developers to interact with it. I have developed it with Karaf 4.3.2, simply build the module and deploy it to Karaf. 
 
-Make sure to place your `pdfservices-api-credentials.json` and the `private.key` file in your resources folder in order to allow for successful authentication with the Doc Cloud API.
+Make sure to place your `pdfservices-api-credentials.json` and the `private.key` file in the `osgi-doc-cloud/core/src/main/resources` folder in order to allow for successful authentication with the Doc Cloud API.
 
 # Contributor
 
