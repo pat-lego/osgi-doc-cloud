@@ -4,23 +4,19 @@
   <groupId>io.github.patlego.dc</groupId>
   <artifactId>doc-cloud-wrapper</artifactId>
   <version>1.0-SNAPSHOT</version>
-
   <name>Adobe Doc Cloud Wrapper</name>
-
   <packaging>pom</packaging>
-
   <modules>
     <module>core</module>
     <module>karaf-module</module>
+    <module>sling-module</module>
   </modules>
-
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <pdfservices.sdk.version>2.1.0</pdfservices.sdk.version>
   </properties>
-
   <build>
     <pluginManagement>
       <plugins>

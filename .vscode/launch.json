@@ -11,6 +11,13 @@
             "request": "attach",
             "port": 5005,
              "hostName": "localhost"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Attach) - Sling",
+            "request": "attach",
+            "hostName": "localhost",
+            "port": 8000
         }
     ]
 }
