@@ -10,7 +10,7 @@
   <groupId>io.github.patlego.dc</groupId>
   <artifactId>core</artifactId>
 
-  <name>Core</name>
+  <name>Doc Cloud Core SDK</name>
 
   <build>
     <resources>

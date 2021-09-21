@@ -12,7 +12,7 @@
 
   <packaging>bundle</packaging>
 
-  <name>Apache Karaf Doc Cloud Wrapper</name>
+  <name>Apache Karaf Doc Cloud Bundle</name>
 
   <build>
     <plugins>
